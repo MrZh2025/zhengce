@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>医疗器械注册管理办法 政策追踪周报 2026-03-25</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Microsoft YaHei','PingFang SC',sans-serif;background:#f5f7fa;color:#2c3e50;line-height:1.7}
+  .header{background:linear-gradient(135deg,#6c3483,#8e44ad);color:#fff;padding:40px 24px 32px;text-align:center}
+  .header h1{font-size:22px;letter-spacing:1px}
+  .header .date{margin-top:8px;font-size:14px;opacity:.85}
+  .page-wrap{display:flex;max-width:1200px;margin:0 auto;position:relative}
+  .sidebar{width:220px;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto;background:#fff;border-right:1px solid #e0e6ed;padding:20px 0;box-shadow:2px 0 8px rgba(0,0,0,.03);z-index:10}
+  .sidebar .toc-title{font-size:13px;font-weight:700;color:#6c3483;padding:0 16px 12px;border-bottom:1px solid #eee;margin-bottom:8px}
+  .toc-item{display:block;padding:7px 16px 7px 20px;font-size:12.5px;color:#555;text-decoration:none;border-left:3px solid transparent;transition:all .2s;line-height:1.5}
+  .toc-item:hover{color:#8e44ad;background:#f5eef8;border-left-color:#bb8fce}
+  .toc-item.active{color:#6c3483;font-weight:600;background:#ebdef0;border-left-color:#8e44ad}
+  .main-content{flex:1;min-width:0;padding:0 20px 40px;margin-top:-20px;position:relative;z-index:1}
+  .status-bar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+  .status-chip{background:#fff;border-radius:10px;padding:14px 20px;box-shadow:0 1px 8px rgba(0,0,0,.05);flex:1;min-width:160px;text-align:center}
+  .status-chip .label{font-size:11px;color:#7f8c8d;text-transform:uppercase;letter-spacing:1px}
+  .status-chip .val{font-size:18px;font-weight:700;margin-top:4px}
+  .footer{text-align:center;padding:20px;color:#7f8c8d;font-size:12px}
+  .sidebar-toggle{display:none;position:fixed;bottom:20px;left:20px;z-index:100;width:44px;height:44px;border-radius:50%;background:#6c3483;color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+  @media(max-width:860px){
+    .sidebar{position:fixed;left:-240px;top:0;transition:left .3s;z-index:100;box-shadow:4px 0 20px rgba(0,0,0,.15)}
+    .sidebar.open{left:0}
+    .sidebar-toggle{display:block}
+    .main-content{padding:0 12px 40px}
+  }
+  @media print{
+    .sidebar,.sidebar-toggle{display:none!important}
+    .header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    table thead tr{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .page-wrap{display:block}
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <div style="font-size:14px;opacity:.8;margin-bottom:6px">欢迎，周先生</div>
+  <h1>《医疗器械注册与备案管理办法》政策追踪周报</h1>
+  <div class="date">2026/03/25</div>
+</div>
+<div class="page-wrap">
+  <nav class="sidebar" id="sidebar">
+    <div class="toc-title">&#128209; 报告目录</div>
+    <a href="#sec-top" class="toc-item" data-target="sec-top">状态概览</a>
+    <a href="#sec-status-table" class="toc-item" data-target="sec-status-table">追踪状态总览</a>
+    <a href="#sec-0" class="toc-item" data-target="sec-0">办法当前状态</a>
+    <a href="#sec-1" class="toc-item" data-target="sec-1">本周注册法规动态</a>
+    <a href="#sec-2" class="toc-item" data-target="sec-2">注册审评审批改革</a>
+    <a href="#sec-3" class="toc-item" data-target="sec-3">创新与优先审批动态</a>
+    <a href="#sec-4" class="toc-item" data-target="sec-4">临床评价与试验</a>
+    <a href="#sec-5" class="toc-item" data-target="sec-5">分类目录与标准</a>
+    <a href="#sec-6" class="toc-item" data-target="sec-6">四川省注册审批动态</a>
+    <a href="#sec-7" class="toc-item" data-target="sec-7">注册要求对体系检查的影响</a>
+    <a href="#sec-8" class="toc-item" data-target="sec-8">重点领域动态：核药注册</a>
+    <a href="#sec-9" class="toc-item" data-target="sec-9">重点领域动态：脑机接口注册</a>
+    <a href="#sec-10" class="toc-item" data-target="sec-10">重点领域动态：医疗机器人注册</a>
+    <a href="#sec-11" class="toc-item" data-target="sec-11">重点领域动态：AI 医疗器械注册</a>
+    <a href="#sec-12" class="toc-item" data-target="sec-12">行业与国际趋势参考</a>
+    <a href="#sec-13" class="toc-item" data-target="sec-13">下一步关注要点</a>
+    <a href="#sec-14" class="toc-item" data-target="sec-14">变化判定</a>
+  </nav>
+  <div class="main-content">
+    <div id="sec-top" class="section-card" style="padding-top:4px">
+      <div class="status-bar">
+        <div class="status-chip">
+          <div class="label">变化状态</div>
+          <div class="val" style="color:#27ae60">&#9679; 未发现新变化</div>
+        </div>
+        <div class="status-chip">
+          <div class="label">搜索引擎</div>
+          <div class="val" style="font-size:15px;color:#8e44ad">Tavily + 百度</div>
+        </div>
+        <div class="status-chip">
+          <div class="label">网页结果</div>
+          <div class="val" style="color:#6c3483">182 条</div>
+        </div>
+        <div class="status-chip">
+          <div class="label">当前版本</div>
+          <div class="val" style="font-size:15px;color:#6c3483">2021.10.01</div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="sec-status-table" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 4px">&#128202; 各领域追踪状态总览</h3>
+      <p style="font-size:12px;color:#7f8c8d;margin:0 0 14px"><span style="color:#e74c3c">&#9679; 有新动态</span>&nbsp;&nbsp;<span style="color:#f39c12">&#9679; 持续关注</span>&nbsp;&nbsp;<span style="color:#27ae60">&#9679; 无新动态</span></p>
+      <div style="overflow-x:auto;border-radius:8px;border:1px solid #e0e6ed">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#6c3483">
+              <th style="padding:10px 14px;color:#fff;text-align:left;font-weight:600">追踪领域</th>
+              <th style="padding:10px 14px;color:#fff;text-align:left;font-weight:600">本周状态</th>
+              <th style="padding:10px 14px;color:#fff;text-align:left;font-weight:600">关键动态摘要</th>
+              <th style="padding:10px 14px;color:#fff;text-align:left;font-weight:600">对检查工作的影响</th>
+            </tr>
+          </thead>
+          <tbody>
+      <tr style="background:#fff">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">注册办法修订</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#27ae60;background:#f0faf4">&#9679; 无新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px">办法本身仍为 2021 年版本，无修订公告</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">检查依据保持不变，关注上位法立法动态</td>
+      </tr>
+      <tr style="background:#f8fbfe">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">审评审批改革</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#e74c3c;background:#fef2f2">&#9679; 有新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px"><a href="https://www.nmpa.gov.cn/xxgk/fgwj/gzwj/gzwjylqx/20260224172356196.html" target="_blank" style="color:#2980b9;text-decoration:none;border-bottom:1px dashed #85c1e9">2025 注册工作报告，湖北江苏审评提速 &#8599;</a></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">关注审评时限优化对企业注册策略的影响</td>
+      </tr>
+      <tr style="background:#fff">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">创新优先审批</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#e74c3c;background:#fef2f2">&#9679; 有新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px">2025 年创新获批 76 个，博睿康脑机接口获批</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">检查创新产品需关注特别审查程序合规性</td>
+      </tr>
+      <tr style="background:#f8fbfe">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">临床评价</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#f39c12;background:#fef9e7">&#9679; 持续关注</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px">2025 年临床试验检查要点公告，无新指导原则</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">强化临床试验项目检查要点及判定原则执行</td>
+      </tr>
+      <tr style="background:#fff">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">分类目录</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#e74c3c;background:#fef2f2">&#9679; 有新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px"><a href="https://www.nmpa.gov.cn/directory/web/nmpa/xxgk/ggtg/ylqxggtg/ylqxqtggtg/20260313151505167.html" target="_blank" style="color:#2980b9;text-decoration:none;border-bottom:1px dashed #85c1e9">2025 年第 132 号公告调整 31 类，射频治疗升三类 &#8599;</a></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">检查中需核对产品最新管理类别，防止类别错误</td>
+      </tr>
+      <tr style="background:#f8fbfe">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">四川省注册审批</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#e74c3c;background:#fef2f2">&#9679; 有新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px"><a href="http://yjj.sc.gov.cn/scyjj/c103154/2026/2/27/95c383fb70d9496e83f76525caecccad.shtml" target="_blank" style="color:#2980b9;text-decoration:none;border-bottom:1px dashed #85c1e9">2026 行政检查计划，第二类注册信息公示，MRI 培训 &#8599;</a></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">结合省局计划开展针对性检查，关注高端器械</td>
+      </tr>
+      <tr style="background:#fff">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">核药注册</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#27ae60;background:#f0faf4">&#9679; 无新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px">搜索结果无特定核药注册动态</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">按现行放射性药品规定执行</td>
+      </tr>
+      <tr style="background:#f8fbfe">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">脑机接口注册</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#e74c3c;background:#fef2f2">&#9679; 有新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px">写入政府工作报告，植入式纳入三类临床审批目录</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">高风险严监管，重点检查临床试验审批合规性</td>
+      </tr>
+      <tr style="background:#fff">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">医疗机器人注册</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#f39c12;background:#fef9e7">&#9679; 持续关注</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px">有源手术器械为创新获批前五品类</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">关注运动控制精度与安全性验证记录</td>
+      </tr>
+      <tr style="background:#f8fbfe">
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-weight:600;color:#1a5276;white-space:nowrap">AI 医疗器械注册</td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;white-space:nowrap"><span style="display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;color:#e74c3c;background:#fef2f2">&#9679; 有新动态</span></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:13px"><a href="https://www.nmpa.gov.cn/directory/web/nmpa/xxgk/ggtg/ylqxggtg/ylqxqtggtg/20260313152722157.html" target="_blank" style="color:#2980b9;text-decoration:none;border-bottom:1px dashed #85c1e9">算法透明度要求提高，数据安全隐私保护加强 &#8599;</a></td>
+        <td style="padding:10px 14px;border-bottom:1px solid #e0e6ed;font-size:12px;color:#555">检查软件更新管理、算法变更及数据安全性</td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div id="sec-0" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【办法当前状态】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">当前最新版本为 2021 年 10 月 1 日起施行的《医疗器械注册与备案管理办法》（国家市场监督管理总局令第 47 号）。该版本目前仍为现行有效版本，搜索结果中未发现 2026 年有新的修订公告。其上位法依据主要为《医疗器械监督管理条例》。值得注意的是，《医疗器械管理法》已纳入 2026 年度重点立法任务，未来可能成为新的上位法，但目前尚未正式颁布。</p>
+    </div><div id="sec-1" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【本周注册法规动态】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">本周未发现《医疗器械注册与备案管理办法》本身有新的修订或征求意见稿发布。但相关配套政策活跃，包括《医疗器械管理法》立法进程推进、医疗器械唯一标识实施公告发布、医疗器械分类目录调整公告实施等。国家药监局发布了 2025 年度医疗器械注册工作报告，揭示了审评审批的整体趋势。</p>
+    </div><div id="sec-2" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【注册审评审批改革】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">2025 年度医疗器械注册工作报告显示，国家药监局批准创新医疗器械 76 个，优先审批医疗器械 25 个，同比显著增长。地方层面，湖北省将第二类医疗器械技术审评时限缩短至平均 40 个工作日，江苏省打造智慧审批体系实现在线提交与进度查询。2026 年政府工作报告首次将推动医疗器械高质量发展写入，标志着行业从规模扩张迈入创新提质阶段。注册人制度实施进一步深化，强调全链条责任追溯。</p>
+    </div><div id="sec-3" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【创新与优先审批动态】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">2025 年国家药监局收到创新医疗器械特别审批申请 457 项，104 项获准进入特别审查程序。近期获批的创新产品包括全球首个植入式脑机接口三类医疗器械（博睿康医疗科技）、阿里达摩院胰腺病变 CT 图像辅助分诊软件等。四川省方面，2026 年 2 月公示止血刨削装置（成都美创医疗科技股份有限公司）拟同意进入第二类创新医疗器械特别审批程序。</p>
+    </div><div id="sec-4" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【临床评价与试验】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">2025 年国家药监局发布关于医疗器械临床试验项目检查要点及判定原则的公告，细化检查结果判定方法。医疗器械临床评价技术指导原则体系保持稳定，涵盖临床评价核心定义、等同性论证、真实世界数据应用等内容。搜索结果中未发现 2026 年临床评价指导原则有新的重大更新公告，但监管对临床试验项目管理的规范化要求持续提高。</p>
+    </div><div id="sec-5" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【分类目录与标准】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">2025 年国家药监局发布关于调整《医疗器械分类目录》部分内容的公告（2025 年第 132 号），对 31 类医疗器械涉及内容进行调整。具体包括质谱检测系统、诊断 X 射线机新增型号，口腔义齿制作材料增加增材制造用金属，射频浅表治疗设备从二类升级为三类等。调整实施要求明确，已受理尚未完成审批的按原类别，已注册的由三类调二类的注册证有效期内有效。</p>
+    </div><div id="sec-6" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【四川省注册审批动态】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">截至 2026 年 2 月 28 日，四川省第二类医疗器械生产企业 2800 家。四川省药品监督管理局发布 2026 年度行政检查计划，严格规范涉企行政检查行为。2026 年 3 月持续发布第二类医疗器械注册信息公示。四川省药品技术检查中心 2026 年举办医疗器械检查员继续教育培训，聚焦磁共振类高端医疗器械，围绕成像基本原理及产品质量管理展开。</p>
+    </div><div id="sec-7" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【注册要求对体系检查的影响】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第一，注册核查穿透生产场地，检查员需关注注册人对 CDMO 的实际生产记录、物料溯源、人员资质的管理能力，即使企业委托生产也要对质量体系负责。</p><p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第二，设计开发与生产强绑定，检查中需核实设计输出的每一项参数是否能在生产环节精准复现，防止研发与生产脱节。</p><p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第三，变更管理全程留痕，从原料供应商更换到生产工艺调整，包括 CDMO 内部变更，都要检查是否提前告知注册人并提交风险评估报告，防止擅自变更。</p><p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第四，唯一标识实施进度加快，检查员需关注企业是否按 2027 年 6 月 1 日（第二类）和 2029 年 6 月 1 日（第一类）的时间节点做好 UDI 赋码与数据上传准备。</p>
+    </div><div id="sec-8" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【重点领域动态：核药注册】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">搜索结果中未发现 2026 年放射性药品或核素药物注册审批的特殊新要求或技术指导原则更新。检查员可暂按现行放射性药品监督管理规定执行，关注后续是否有专门立法或指南发布。</p>
+    </div><div id="sec-9" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【重点领域动态：脑机接口注册】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">脑机接口首次被写入 2026 年政府工作报告，明确列入培育发展的未来产业。器审中心征求意见稿已明确将植入式脑机接口医疗器械新增进需进行临床试验审批的第三类医疗器械目录。海南省出台支持措施探索真实世界证据用于辅助注册。全球首个植入式脑机接口产品已获批上市，监管态度为高风险严监管。</p>
+    </div><div id="sec-10" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【重点领域动态：医疗机器人注册】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">2025 年批准的创新医疗器械数量前五位的品类中包含有源手术器械。虽然未单独发布机器人注册新规，但作为高风险有源器械，其注册审评趋严。检查员应关注手术机器人同品种比对要求及临床试验验证情况，特别是运动控制精度与安全性验证。</p>
+    </div><div id="sec-11" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【重点领域动态：AI 医疗器械注册】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">国家药监局对 AI 医疗软件监管趋严，增加数据安全和隐私保护要求，强调算法训练数据的多样性和临床适用性。监管分类明确，提供直接诊断结论的为第三类，辅助诊断的为第二类。针对算法透明度、可解释性提出更高标准，检查员需关注企业软件更新管理与算法变更控制。</p>
+    </div><div id="sec-12" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【行业与国际趋势参考】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">搜索结果中未详细提及 FDA 510(k) 改革或 EU MDR 最新动态。但全球首个脑机接口产品在中国获批，显示我国在前沿领域监管可能处于领先地位。国际协调 IMDRF 动态未在本次搜索结果中体现，建议检查员关注 NMPA 后续是否发布国际互认相关指南。</p>
+    </div><div id="sec-13" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #8e44ad;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【下一步关注要点】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第一，关注《医疗器械管理法》立法进展，特别是境内责任人连带责任及个人责任条款，这将直接影响检查中的责任判定。</p><p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第二，跟踪脑机接口产品临床试验审批目录的正式发布，提前准备相关高风险产品的检查方案。</p><p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第三，监督企业 AI 算法变更管理，确保软件更新不未经注册变更擅自实施，重点检查算法训练数据的安全性。</p><p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">第四，落实唯一标识实施进度，2027 年 6 月 1 日前完成第二类医疗器械赋码准备，检查中需验证 UDI 数据库上传情况。</p>
+    </div><div id="sec-14" class="section-card" style="background:#fff;border-radius:10px;border-left:4px solid #27ae60;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 8px rgba(0,0,0,.05)">
+      <h3 style="font-size:16px;color:#6c3483;margin:0 0 12px">【变化判定】</h3>
+      <p style="text-indent:2em;font-size:14px;line-height:1.8;margin:4px 0">否。理由：《医疗器械注册与备案管理办法》本身（总局令第 47 号）在 2026 年未发现新的修订公告，核心法规文本保持不变。但配套政策如唯一标识实施范围、分类目录调整、创新审批动态等有更新，检查员需关注这些配套政策对体系运行的实际影响，而非办法本身的条款变化。</p>
+    </div>
+  </div>
+</div>
+<button class="sidebar-toggle" id="sidebarToggle" onclick="document.getElementById('sidebar').classList.toggle('open')">&#9776;</button>
+<div class="footer">本报告由 OpenClaw 政策追踪系统自动生成于 2026/03/25 | 数据来源：Tavily + 百度双引擎实时搜索 | 仅供参考</div>
+<script>
+(function(){
+  const items = document.querySelectorAll('.toc-item');
+  const cards = document.querySelectorAll('.section-card');
+  function updateActive(){
+    let current = '';
+    cards.forEach(c => {
+      const rect = c.getBoundingClientRect();
+      if(rect.top <= 120) current = c.id;
+    });
+    items.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('data-target') === current);
+    });
+  }
+  window.addEventListener('scroll', updateActive);
+  updateActive();
+  items.forEach(a => {
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      const el = document.getElementById(this.getAttribute('data-target'));
+      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      document.getElementById('sidebar').classList.remove('open');
+    });
+  });
+})();
+</script>
+</body>
+</html>

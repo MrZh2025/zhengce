@@ -1,0 +1,4 @@
+.github-config.txt
+.vscode/
+*.py
+*.bat
