@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>对标达芬奇手术机器人产业与高校研发平台地图</title>
+  <style>
+    :root {
+      --bg-dark: #0a0f1d;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-blue: #38bdf8;
+      --accent-purple: #a855f7;
+      --accent-pink: #ec4899;
+      --accent-green: #10b981;
+      --accent-gold: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0a0f1d 50%, #030712 100%);
+      min-height: 100vh;
+      color: var(--text-main);
+      padding-bottom: 60px;
+    }
+    .nav-bar {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent-blue);
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      transition: all 0.2s;
+    }
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    }
+    .header {
+      text-align: center;
+      padding: 20px 24px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #38bdf8, #a855f7, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .header p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .stats-bar {
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent-blue);
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .filter-panel {
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      padding: 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--accent-blue);
+      color: #030712;
+      border-color: var(--accent-blue);
+      font-weight: 600;
+    }
+    .search-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 13px;
+      width: 260px;
+      outline: none;
+    }
+    .search-box:focus {
+      border-color: var(--accent-blue);
+    }
+    .highlight-section {
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      padding: 0 24px;
+    }
+    .sc-highlight-box {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(56, 189, 248, 0.05) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 16px;
+      padding: 20px 24px;
+      position: relative;
+    }
+    .sc-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #34d399;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .grid-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+    .ent-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ent-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    }
+    .ent-card.sichuan {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .tag-prov { background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); }
+    .tag-cat { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+    .tag-sc { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .ent-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .benchmark-pill {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fbbf24;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .field-row {
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .field-label {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .field-val-highlight {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+    .academic-box {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 12px 0;
+      border-left: 3px solid var(--accent-purple);
+    }
+    .footer {
+      text-align: center;
+      padding: 40px 20px 0;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-bar">
+    <a href="index.html" class="back-btn">&#8592; 返回政策追踪首页</a>
+    <a href="医疗机器人产业地图/医疗机器人企业投资地图20260820.xlsx" class="download-btn" download>&#128229; 下载完整 Excel 投资地图</a>
+  </div>
+
+  <div class="header">
+    <span class="header-badge">国家级硬科技 &middot; 外科手术机器人专题</span>
+    <h1>对标达芬奇手术机器人产业与高校研发平台地图</h1>
+    <p>聚焦对标直观外科达芬奇（Da Vinci）、史赛克 Mako 等全球外科金标的中国自主研发制造实体、旗舰微创手术系统与源头高校国家重点实验室/院士转化团队。</p>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-num" id="totalCount">28</div>
+      <div class="stat-label">达芬奇级研发实体与平台</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="color:#10b981;">3</div>
+      <div class="stat-label">四川本土战略力量（诺孚泰/华西精创/博恩思）</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="color:#c084fc;">11</div>
+      <div class="stat-label">软组织多孔/单孔腔镜机器人</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="color:#fbbf24;">9</div>
+      <div class="stat-label">骨科与脊柱精准切削机器人</div>
+    </div>
+  </div>
+
+  <div class="highlight-section">
+    <div class="sc-highlight-box">
+      <div class="sc-title">&#128640; 四川省本土“达芬奇级”核心突破梯队</div>
+      <p style="font-size: 13px; color: #94a3b8; line-height: 1.6;">
+        1. <strong>诺孚泰智能科技（成都）</strong>：重庆大学柏龙教授团队成果转化，天府国际生物城5000㎡基地，全球首创免气腹五臂双操控微创腔镜机器人（突破达芬奇四臂局限）；<br>
+        2. <strong>成都博恩思医学机器人</strong>：华西医院副院长曾勇教授肝胆胰团队与斯坦福前团队联合，微创多孔腹腔镜与经自然腔道手术系统；<br>
+        3. <strong>四川华西精创 / 华西医疗机器人研究院</strong>：华西医院裴福兴/李为民教授团队，登顶《Science Robotics》的 MicroSpine 柔性脊柱机器人与三维骨科导航定位系统。
+      </p>
+    </div>
+  </div>
+
+  <div class="filter-panel">
+    <div class="tabs" id="categoryTabs">
+      <button class="tab-btn active" data-cat="all">全部 (28)</button>
+      <button class="tab-btn" data-cat="腔镜微创手术机器人">腔镜微创 (11)</button>
+      <button class="tab-btn" data-cat="骨科手术机器人">骨科与脊柱 (9)</button>
+      <button class="tab-btn" data-cat="神经外科手术机器人">神经外科/LITT (4)</button>
+      <button class="tab-btn" data-cat="血管介入手术机器人">血管介入 (3)</button>
+      <button class="tab-btn" data-cat="四川省">四川重点 (3)</button>
+    </div>
+    <input type="text" id="searchInput" class="search-box" placeholder="搜索企业、产品、高校或科学家...">
+  </div>
+
+  <div class="grid-container" id="gridContainer">
+    <!-- Rendered dynamically by JS -->
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2026 医疗器械政策追踪与前沿产业平台 &middot; <a href="https://github.com/MrZh2025/zhengce" style="color: #64748b;">GitHub 仓库</a></p>
+  </div>
+
+  <script>
+    let enterprises = [];
+    let currentCat = 'all';
+    let searchQuery = '';
+
+    async function loadData() {
+      try {
+        const res = await fetch('_t/robot_enterprises.json');
+        const json = await res.json();
+        enterprises = json.data || [];
+        render();
+      } catch(e) {
+        console.error("加载数据失败:", e);
+      }
+    }
+
+    function render() {
+      const container = document.getElementById('gridContainer');
+      let filtered = enterprises.filter(e => {
+        let matchCat = true;
+        if (currentCat === '四川省') {
+          matchCat = e.province === '四川省';
+        } else if (currentCat !== 'all') {
+          matchCat = e.category === currentCat;
+        }
+        let matchSearch = true;
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          matchSearch = (e.name && e.name.toLowerCase().includes(q)) ||
+                        (e.product_name && e.product_name.toLowerCase().includes(q)) ||
+                        (e.university_platform && e.university_platform.toLowerCase().includes(q)) ||
+                        (e.academic_leader && e.academic_leader.toLowerCase().includes(q)) ||
+                        (e.tech_route && e.tech_route.toLowerCase().includes(q));
+        }
+        return matchCat && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;">未找到匹配的手术机器人实体或平台</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(e => {
+        const isSC = e.province === '四川省';
+        return `
+          <div class="ent-card ${isSC ? 'sichuan' : ''}">
+            <div>
+              <div class="tag-row">
+                <span class="tag tag-prov">${e.province} &middot; ${e.city}</span>
+                <span class="tag tag-cat">${e.category || '手术机器人'}</span>
+                ${isSC ? '<span class="tag tag-sc">★ 四川战略标杆</span>' : ''}
+              </div>
+              <div class="ent-title">${e.name}</div>
+              <div class="benchmark-pill">&#9873; ${e.benchmark_tier}</div>
+              
+              <div class="field-row">
+                <span class="field-label">旗舰产品：</span>
+                <span class="field-val-highlight">${e.product_name}</span>
+              </div>
+              <div class="field-row">
+                <span class="field-label">技术优势：</span>
+                <span>${e.tech_route}</span>
+              </div>
+              
+              <div class="academic-box">
+                <div style="font-size:11px; color:#c084fc; font-weight:600; margin-bottom:4px;">&#127891; 依托高校/科研院所平台</div>
+                <div style="font-size:12.5px; color:#e2e8f0; font-weight:500;">${e.university_platform}</div>
+                <div style="font-size:12px; color:#94a3b8; margin-top:4px;"><strong>带头人：</strong>${e.academic_leader}</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="field-row" style="margin-top: 8px; font-size: 12px; color: #10b981;">
+                <strong>临床与获批：</strong>${e.stage}
+              </div>
+              <div class="field-row" style="font-size: 11.5px; color: #64748b;">
+                <strong>资本背景：</strong>${e.financing}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Event listeners
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCat = btn.dataset.cat;
+        render();
+      });
+    });
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      render();
+    });
+
+    loadData();
+  </script>
+</body>
+</html>

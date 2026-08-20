@@ -3,67 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>医疗器械政策追踪平台</title>
+  <title>医疗器械政策追踪与战略产业地图平台</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: linear-gradient(135deg, #0c1426 0%, #1a2a4a 50%, #0f2027 100%);
+      background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0c1426 50%, #030712 100%);
       min-height: 100vh;
       color: #e0e6ed;
     }
     .header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 50px 20px 24px;
     }
     .header h1 {
-      font-size: 32px;
-      font-weight: 700;
-      background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+      font-size: 34px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #38bdf8, #a855f7, #ec4899);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 12px;
+      letter-spacing: 0.5px;
     }
     .header p {
       font-size: 15px;
       color: #94a3b8;
-      max-width: 500px;
+      max-width: 650px;
       margin: 0 auto;
       line-height: 1.6;
     }
     .badge {
       display: inline-block;
-      margin-top: 16px;
+      margin-top: 14px;
       padding: 4px 14px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
-      background: rgba(96,165,250,0.15);
-      color: #60a5fa;
-      border: 1px solid rgba(96,165,250,0.3);
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .section-title {
+      max-width: 1200px;
+      margin: 20px auto 10px;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      background: #38bdf8;
+      border-radius: 2px;
     }
     .cards {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      padding: 40px 20px;
-      flex-wrap: wrap;
-      max-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      padding: 10px 20px 40px;
+      max-width: 1200px;
       margin: 0 auto;
     }
     .card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
-      padding: 32px 28px;
-      width: 380px;
+      padding: 28px 24px;
       transition: all 0.3s ease;
       cursor: pointer;
       text-decoration: none;
       color: inherit;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card::before {
       content: '';
@@ -72,13 +92,15 @@
       height: 3px;
       border-radius: 16px 16px 0 0;
     }
-    .card-regulation::before { background: linear-gradient(90deg, #3b82f6, #6366f1); }
+    .card-robot::before { background: linear-gradient(90deg, #ec4899, #a855f7); }
+    .card-regulation::before { background: linear-gradient(90deg, #38bdf8, #6366f1); }
     .card-registration::before { background: linear-gradient(90deg, #10b981, #06b6d4); }
+    
     .card:hover {
       transform: translateY(-4px);
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.2);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(56, 189, 248, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
     .card-icon {
       width: 48px; height: 48px;
@@ -87,15 +109,28 @@
       align-items: center;
       justify-content: center;
       font-size: 24px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
-    .card-regulation .card-icon { background: rgba(59,130,246,0.15); }
-    .card-registration .card-icon { background: rgba(16,185,129,0.15); }
+    .card-robot .card-icon { background: rgba(236, 72, 153, 0.15); color: #ec4899; }
+    .card-regulation .card-icon { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    .card-registration .card-icon { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+    
     .card h2 {
       font-size: 18px;
-      font-weight: 600;
-      color: #f1f5f9;
+      font-weight: 700;
+      color: #f8fafc;
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tag-hot {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #f43f5e, #ec4899);
+      color: #fff;
     }
     .card .desc {
       font-size: 13px;
@@ -118,13 +153,13 @@
     .card .arrow {
       position: absolute;
       right: 24px;
-      bottom: 28px;
+      bottom: 26px;
       font-size: 18px;
       color: #475569;
       transition: all 0.3s;
     }
     .card:hover .arrow {
-      color: #60a5fa;
+      color: #38bdf8;
       transform: translateX(4px);
     }
     .footer {
@@ -135,50 +170,74 @@
     }
     .footer a { color: #64748b; text-decoration: none; }
     .footer a:hover { color: #94a3b8; }
-    @media (max-width: 600px) {
-      .header h1 { font-size: 24px; }
-      .cards { padding: 20px 16px; }
-      .card { width: 100%; padding: 24px 20px; }
-    }
   </style>
 </head>
 <body>
   <div class="header">
-    <h1>医疗器械政策追踪平台</h1>
-    <p>四川省医疗器械生产检查员专属工具，自动追踪法规动态，覆盖核药、脑机接口、医疗机器人、AI制药四大前沿领域</p>
-    <span class="badge">自动化周报 &middot; AI驱动分析</span>
+    <h1>医疗器械政策追踪与前沿产业平台</h1>
+    <p>聚焦四川与全国高精尖医疗装备，深度追踪法规监管动态与对标达芬奇手术机器人等核心前沿产业地图</p>
+    <span class="badge">自动化周报 &middot; 达芬奇级硬科技产业地图 &middot; 产学研穿透</span>
   </div>
 
+  <div class="section-title">&#128202; 核心战略产业地图板块</div>
+  <div class="cards">
+    <a class="card card-robot" href="医疗机器人产业地图.html">
+      <div>
+        <div class="card-icon">&#129302;</div>
+        <h2>对标达芬奇手术机器人产业地图 <span class="tag-hot">重磅上线</span></h2>
+        <div class="desc">
+          聚焦全国 28 家对标直观外科达芬奇（Da Vinci Xi/SP）及史赛克 Mako 的顶尖微创手术机器人研发制造实体与源头高校重点实验室（清华、交大、北航、哈工大、天大、重大、华西等），独家收录四川诺孚泰（五臂双操控）、博恩思、华西精创（MicroSpine登顶Science Robotics）。
+        </div>
+      </div>
+      <div>
+        <div class="meta">
+          <span class="dot"></span>
+          <span>收录 28 家国家级研发实体 &middot; 2026-08-20 最新版</span>
+        </div>
+        <span class="arrow">&#8594;</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="section-title">&#128220; 医疗器械监管法规追踪周报</div>
   <div class="cards">
     <a class="card card-regulation" href="医疗器械监管条例_政策追踪_2026-03-25.html">
-      <div class="card-icon">&#128220;</div>
-      <h2>《医疗器械监督管理条例》追踪</h2>
-      <div class="desc">
-        追踪条例修订、生产监管法规、飞行检查通报、四川省药监局动态，以及核药/脑机接口/医疗机器人/AI制药领域的监管趋势。
+      <div>
+        <div class="card-icon">&#128220;</div>
+        <h2>《医疗器械监督管理条例》追踪</h2>
+        <div class="desc">
+          追踪条例修订、生产监管法规、飞行检查通报、四川省药监局动态，以及核药/脑机接口/医疗机器人/AI制药领域的监管趋势与体系检查要点。
+        </div>
       </div>
-      <div class="meta">
-        <span class="dot"></span>
-        <span>最新报告: 2026-03-25</span>
+      <div>
+        <div class="meta">
+          <span class="dot"></span>
+          <span>最新报告: 2026-03-25</span>
+        </div>
+        <span class="arrow">&#8594;</span>
       </div>
-      <span class="arrow">&#8594;</span>
     </a>
 
     <a class="card card-registration" href="医疗器械注册管理办法_政策追踪_2026-03-25.html">
-      <div class="card-icon">&#128203;</div>
-      <h2>《医疗器械注册管理办法》追踪</h2>
-      <div class="desc">
-        追踪注册办法修订、审评审批改革、创新优先审批、临床评价、分类目录调整，以及四大重点领域的注册审批动态。
+      <div>
+        <div class="card-icon">&#128203;</div>
+        <h2>《医疗器械注册管理办法》追踪</h2>
+        <div class="desc">
+          追踪注册办法修订、审评审批改革、创新优先审批、临床评价指导原则、分类目录调整，以及重点前沿领域的注册申报与缺陷判定标准。
+        </div>
       </div>
-      <div class="meta">
-        <span class="dot"></span>
-        <span>最新报告: 2026-03-25</span>
+      <div>
+        <div class="meta">
+          <span class="dot"></span>
+          <span>最新报告: 2026-03-25</span>
+        </div>
+        <span class="arrow">&#8594;</span>
       </div>
-      <span class="arrow">&#8594;</span>
     </a>
   </div>
 
   <div class="footer">
-    <p>&copy; 2026 医疗器械政策追踪平台 &middot; <a href="https://github.com/MrZh2025/zhengce">GitHub</a></p>
+    <p>&copy; 2026 医疗器械政策追踪与前沿产业平台 &middot; <a href="https://github.com/MrZh2025/zhengce">GitHub 仓库</a> &middot; 四川发展学习资料专属</p>
   </div>
 </body>
 </html>
